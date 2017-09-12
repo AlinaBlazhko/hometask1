@@ -35,7 +35,7 @@ public class TestForChrome {
 
         WebElement name = driver.findElement(By.xpath("//div[contains(@class, 'profile-photo')]/span"));
         assertTrue(name.isDisplayed());
-        assertEquals(name.getText(), "Piter Chailovskii");
+        assertEquals(name.getText(), "PITER CHAILOVSKII");
 
         //Open Contact Form
         WebElement contactForm = driver.findElement(By.xpath("//ul[contains(@class, 'sidebar-menu')]/li[2]/a"));
