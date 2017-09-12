@@ -27,9 +27,14 @@ public class TestForChrome {
         password.click();
         password.sendKeys("1234");
 
+        WebElement enter = driver.findElement(By.xpath("//form/button[contains(@class, 'uui-button dark-blue btn-login')]"));
+        enter.click();
+
         WebElement contactForm = driver.findElement(By.xpath("//ul[contains(@class, 'sidebar-menu')]/li[2]/a"));
         contactForm.click();
-        Assert.assertEquals(driver.getTitle(), "Index Page");
+        Assert.assertEquals(driver.getTitle(), "Contact Form");
+
+
 
         //WebElement firstName = driver.findElement(By.xpath(""))
 
