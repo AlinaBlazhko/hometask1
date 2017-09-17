@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Nopackage">
+    <test name="Regression">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="RegrassionTest"/>
+            <class name="SmokeAndRegressionTest"/>
+        </classes>
+    </test>
+</suite>
