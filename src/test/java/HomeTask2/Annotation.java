@@ -20,7 +20,7 @@ public class Annotation {
     }
 
     @BeforeTest
-    public void beforTest(){
+    public void beforeTest(){
         driver = new ChromeDriver();
     }
 
@@ -28,8 +28,8 @@ public class Annotation {
     public void beforeClass(){
         driver.navigate().to("https://jdi-framework.github.io/tests");
         driver.manage().window().maximize();
+        System.out.println(driver.getTitle());
     }
-
 
     @BeforeMethod
     public void beforeMethod(){
