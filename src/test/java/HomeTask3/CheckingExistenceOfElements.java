@@ -1,5 +1,9 @@
 package HomeTask3;
 
+import enums.CheckBoxElements;
+import enums.Colors;
+import enums.RadioElements;
+import enums.Status;
 import init_classes.SelenideExtension;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -7,6 +11,11 @@ import page_object.*;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
+import static enums.CheckBoxElements.WATER;
+import static enums.CheckBoxElements.WIND;
+import static enums.Colors.*;
+import static enums.RadioElements.*;
+import static enums.Status.*;
 import static enums.TestNames.*;
 
 /**
@@ -58,7 +67,31 @@ public class CheckingExistenceOfElements extends SelenideExtension{
         header.click();
         header.clickOnDifferentElement();
         differentElementsPage.checkElements();
-        differentElementsPage.selectCheckboxes(3);
+
+        //Select checkboxes
+        differentElementsPage.selectAndCheckCheckboxes(WATER);
+        differentElementsPage.selectAndCheckCheckboxes(WIND);
+
+        //Select radio
+        differentElementsPage.selectAndCheckRadio(SELEN);
+
+        //Select color
+        differentElementsPage.selectInDropdown(YELLOW);
+
+        //Check in logs section selected values and status
+        differentElementsPage.checkLogSection(WATER.element, TRUE.status);
+        differentElementsPage.checkLogSection(WIND.element, TRUE.status);
+
+        differentElementsPage.checkLogSection(SELEN.element, METAL.status);
+        differentElementsPage.checkLogSection(YELLOW.color, COLORS.status);
+
+        //Unselect checkboxes
+        differentElementsPage.unselectCheckbox(WATER);
+        differentElementsPage.unselectCheckbox(WIND);
+
+        //Check in logs
+        differentElementsPage.checkLogSection(WATER.element, FALSE.status);
+        differentElementsPage.checkLogSection(WATER.element, FALSE.status);
 
     }
 }
