@@ -1,4 +1,4 @@
-package page_object;
+package page_object.section;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +21,10 @@ public class LeftSection {
 
     @FindBy(xpath = "//ul[contains(@class, 'sub')]/li[2]/a")
     private SelenideElement dates;
+
+    public void clickDate(){
+        dates.click();
+    }
 
     @FindBy(xpath = "//ul[contains(@class, 'sub')]/li[3]/a")
     private SelenideElement complexTable;

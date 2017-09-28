@@ -27,7 +27,7 @@ public class DifferentElementsPage {
     @FindBy(css = "div.colors")
     private SelenideElement selectColors;
 
-    @FindBy(xpath = "//select")
+    @FindBy(css = "select.uui-form-element")
     private SelenideElement dropdown;
 
     @FindBy(xpath = "//div[contains(@class, 'main-content-hg')]/button[contains(@class, 'uui-button')]")
@@ -42,7 +42,8 @@ public class DifferentElementsPage {
     @FindBy(css = "#mCSB_1_container")
     private SelenideElement leftSection;
 
-    @FindBy(xpath = "//div[contains(@class, 'info-panel-body info-panel-body-log')]/div[contains(@class, 'info-panel-section')]")
+    @FindBy(css = "ul.panel-body-list.results")
+    //@FindBy(xpath = "//div[contains(@class, 'info-panel-body info-panel-body-log')]/div[contains(@class, 'info-panel-section')]")
     private SelenideElement infoPanel;
 
     public void checkElements(){

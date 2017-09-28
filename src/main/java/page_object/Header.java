@@ -51,8 +51,4 @@ public class Header {
     public void clickOnDifferentElement(){
         differentElements.click();
     }
-
-//    public void clickOnService(){
-//        service.click();
-//    }
 }

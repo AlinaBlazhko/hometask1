@@ -1,13 +1,11 @@
 package HomeTask3;
 
-import enums.CheckBoxElements;
-import enums.Colors;
-import enums.RadioElements;
-import enums.Status;
 import init_classes.SelenideExtension;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import page_object.*;
+import page_object.section.CenterSection;
+import page_object.section.LeftSection;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
@@ -85,7 +83,7 @@ public class CheckingExistenceOfElements extends SelenideExtension{
         differentElementsPage.checkLogSection(SELEN.element, METAL.status);
         differentElementsPage.checkLogSection(YELLOW.color, COLORS.status);
 
-        //Unselect checkboxes
+        //Unselect and assert checkboxes
         differentElementsPage.unselectCheckbox(WATER);
         differentElementsPage.unselectCheckbox(WIND);
 
