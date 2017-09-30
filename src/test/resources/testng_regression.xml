@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="RegrassionTest"/>
+
             <class name="SmokeAndRegressionTest"/>
         </classes>
     </test>

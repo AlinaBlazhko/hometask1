@@ -7,6 +7,7 @@ import enums.CheckBoxElements;
 import enums.Colors;
 import enums.RadioElements;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$$;
