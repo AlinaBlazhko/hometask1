@@ -9,7 +9,7 @@
         </groups>
         <classes>
 
-            <class name="SmokeAndRegressionTest"/>
+            <class name="HomeTask2.SmokeAndRegressionTest"/>
         </classes>
     </test>
 </suite>
