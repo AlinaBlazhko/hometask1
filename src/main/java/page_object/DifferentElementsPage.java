@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$$;
  * Created by X240 on 9/22/2017.
  */
 public class DifferentElementsPage {
-    @FindBy(css = "label.label-checkbox")
+        @FindBy(css = "label.label-checkbox")
     private ElementsCollection checkboxes;
 
     @FindBy(css = "label.label-radio")

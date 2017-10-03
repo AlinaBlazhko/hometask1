@@ -37,7 +37,7 @@ public class CheckingExistenceOfElements extends SelenideExtension{
     }
 
 
-    @Test
+    @Test(groups = "Smoke")
 
     public void existenceElement() {
         open(TEST_URL.name);

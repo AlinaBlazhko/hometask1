@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import ru.yandex.qatools.allure.annotations.Step;
 
 /**
  * Created by X240 on 9/14/2017.
@@ -24,7 +25,7 @@ public class TextBelowPictures {
     }
 
 
-    @Test(dataProvider = "correctText")
+    @Test(dataProvider = "correctText", groups = "Smoke")
     public void test1(String path, String text) {
         System.setProperty("webdriver.gecko.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();

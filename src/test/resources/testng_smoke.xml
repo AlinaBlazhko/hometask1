@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Nopackage">
-    <test name="Regression">
+    <test name="Smoke">
         <groups>
             <run>
                 <include name="Smoke"/>
@@ -10,6 +10,7 @@
         <classes>
             <class name="HomeTask2.SmokeTest"/>
             <class name="HomeTask2.SmokeAndRegressionTest"/>
+            <class name="HomeTask3.CheckingExistenceOfElements"/>
         </classes>
     </test>
 </suite>

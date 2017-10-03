@@ -3,6 +3,7 @@ package page_object;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.visible;
 
@@ -39,6 +40,7 @@ public class Header {
     @FindBy(xpath = "//ul[contains(@class, 'dropdown-menu')]/li[6]/a")
     private SelenideElement differentElements;
 
+    @Step
     public void checkElements(){
         support.should(visible);
         dates.should(visible);
@@ -48,6 +50,7 @@ public class Header {
         differentElements.should(visible);
     }
 
+    @Step()
     public void clickOnDifferentElement(){
         differentElements.click();
     }

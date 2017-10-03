@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static org.testng.internal.PropertyUtils.setProperty;
 
@@ -13,6 +14,7 @@ import static org.testng.internal.PropertyUtils.setProperty;
 public class SmokeTest {
 
     @Test(groups = "Smoke")
+    @Step("Open home page")
     public void test1() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
