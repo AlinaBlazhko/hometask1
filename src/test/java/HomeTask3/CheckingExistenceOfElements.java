@@ -1,12 +1,14 @@
 package HomeTask3;
 
 import init_classes.SelenideExtension;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import page_object.DifferentElementsPage;
 import page_object.Header;
 import page_object.LoginPage;
 import page_object.section.CenterSection;
 import page_object.section.LeftSection;
+import ru.yandex.qatools.allure.testng.AllureTestListener;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
@@ -20,6 +22,7 @@ import static enums.TestNames.*;
 /**
  * Created by X240 on 9/19/2017.
  */
+@Listeners(AllureTestListener.class)
 public class CheckingExistenceOfElements extends SelenideExtension{
 
     private LoginPage log = page(LoginPage.class);

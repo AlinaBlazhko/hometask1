@@ -23,7 +23,7 @@ import static org.testng.internal.PropertyUtils.setProperty;
 /**
  * Created by X240 on 9/14/2017.
  */
-@Listeners(AllureTestListener.class)
+
 public class SmokeTest{
 
 
