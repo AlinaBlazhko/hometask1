@@ -29,15 +29,6 @@ public class SmokeTest{
 
     @Title("simple test")
 
-    @Test(groups = "Smoke")
-    public void test1() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://www.epam.com");
-        Assert.assertEquals(driver.getTitle(),
-                "EPAM | Software Product Development Services");
-        driver.close();
-    }
 
     @Test(groups = "Smoke")
     public void test2() {
