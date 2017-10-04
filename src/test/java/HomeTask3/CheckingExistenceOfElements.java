@@ -1,9 +1,10 @@
 package HomeTask3;
 
 import init_classes.SelenideExtension;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import page_object.*;
+import page_object.DifferentElementsPage;
+import page_object.Header;
+import page_object.LoginPage;
 import page_object.section.CenterSection;
 import page_object.section.LeftSection;
 
@@ -11,8 +12,8 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static enums.CheckBoxElements.WATER;
 import static enums.CheckBoxElements.WIND;
-import static enums.Colors.*;
-import static enums.RadioElements.*;
+import static enums.Colors.YELLOW;
+import static enums.RadioElements.SELEN;
 import static enums.Status.*;
 import static enums.TestNames.*;
 
@@ -21,20 +22,13 @@ import static enums.TestNames.*;
  */
 public class CheckingExistenceOfElements extends SelenideExtension{
 
-    private LoginPage log;
-    private CenterSection center;
-    private Header header;
-    private LeftSection leftSection;
-    private DifferentElementsPage differentElementsPage;
+    private LoginPage log = page(LoginPage.class);
+    private CenterSection center = page(CenterSection.class);
+    private Header header = page(Header.class);
+    private LeftSection leftSection = page(LeftSection.class);
+    private DifferentElementsPage differentElementsPage = page(DifferentElementsPage.class);
 
-    @BeforeClass
-    public void beforeClass(){
-        log = page(LoginPage.class);
-        center = page(CenterSection.class);
-        header = page(Header.class);
-        leftSection = page(LeftSection.class);
-        differentElementsPage = page(DifferentElementsPage.class);
-    }
+
 
 
     @Test(groups = "Smoke")

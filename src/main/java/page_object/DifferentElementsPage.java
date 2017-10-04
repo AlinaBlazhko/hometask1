@@ -8,6 +8,7 @@ import enums.Colors;
 import enums.RadioElements;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$$;
@@ -47,6 +48,7 @@ public class DifferentElementsPage {
     //@FindBy(xpath = "//div[contains(@class, 'info-panel-body info-panel-body-log')]/div[contains(@class, 'info-panel-section')]")
     private SelenideElement infoPanel;
 
+    @Step("Check that element from Different element page are visible")
     public void checkElements(){
 
         for (SelenideElement i: checkboxes) {
@@ -65,16 +67,19 @@ public class DifferentElementsPage {
 
     }
 
+    @Step("Select checkboxes")
     public void selectAndCheckCheckboxes(CheckBoxElements element){
         checkboxes.get(element.ordinal()).click();
         checkboxes.get(element.ordinal()).isSelected();
     }
 
+    @Step("Select radio button")
     public void selectAndCheckRadio(RadioElements element){
         radios.get(element.ordinal()).click();
         radios.get(element.ordinal()).isSelected();
     }
 
+    @Step("Select dropdown element")
     public void selectInDropdown(Colors color){
         selectColors.click();
         dropdownElement.get(color.ordinal()).click();
@@ -82,11 +87,13 @@ public class DifferentElementsPage {
 
     }
 
+    @Step("Unselect checkboxes")
     public void unselectCheckbox(CheckBoxElements elements){
         checkboxes.get(elements.ordinal()).click();
         checkboxes.get(elements.ordinal()).shouldNotBe(checked);
     }
 
+    @Step("Check logs")
     public void checkLogSection(String value, String status){
         infoPanel.should(visible);
         ElementsCollection logs = $$(".info-panel-body-log ul li");
