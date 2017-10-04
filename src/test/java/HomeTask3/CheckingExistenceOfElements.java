@@ -26,25 +26,21 @@ import static enums.TestNames.*;
 
 public class CheckingExistenceOfElements extends SelenideExtension{
 
-    private LoginPage log = page(LoginPage.class);
+    private LoginPage loginPage = page(LoginPage.class);
     private CenterSection center = page(CenterSection.class);
     private Header header = page(Header.class);
     private LeftSection leftSection = page(LeftSection.class);
     private DifferentElementsPage differentElementsPage = page(DifferentElementsPage.class);
 
-
-
-
     @Test(groups = "Smoke")
-
     public void existenceElement() {
-        open(TEST_URL.name);
+        open(System.getenv("target"));
 
-        //Perform login
-        log.login(LOGIN.name, PASSWORD.name);
+        //1 Perform login
+        loginPage.login(LOGIN.name, PASSWORD.name);
 
         //Assert username
-        log.assertUserName();
+        loginPage.assertUserName();
 
         //Check existence of elements in center section
         center.checkIcons();
@@ -88,6 +84,5 @@ public class CheckingExistenceOfElements extends SelenideExtension{
         //Check in logs
         differentElementsPage.checkLogSection(WATER.element, FALSE.status);
         differentElementsPage.checkLogSection(WATER.element, FALSE.status);
-
     }
 }

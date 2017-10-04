@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.$$;
  * Created by X240 on 9/22/2017.
  */
 public class DifferentElementsPage {
-        @FindBy(css = "label.label-checkbox")
+    @FindBy(css = "label.label-checkbox")
     private ElementsCollection checkboxes;
 
     @FindBy(css = "label.label-radio")
@@ -64,7 +64,6 @@ public class DifferentElementsPage {
         button.should(visible);
         rightSection.should(visible);
         leftSection.should(visible);
-
     }
 
     @Step("Select checkboxes")
@@ -96,8 +95,7 @@ public class DifferentElementsPage {
     @Step("Check logs")
     public void checkLogSection(String value, String status){
         infoPanel.should(visible);
-        ElementsCollection logs = $$(".info-panel-body-log ul li");
-        logs.find(matchesText(value)).should(matchesText(status));
+        $$(".info-panel-body-log ul li").find(matchesText(value)).should(matchesText(status));
     }
 
 
