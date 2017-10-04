@@ -8,8 +8,9 @@
             </run>
         </groups>
         <classes>
-            <class name="HomeTask2.SmokeTest"/>
+            <!--<class name="HomeTask2.SmokeTest"/>-->
             <!--<class name="HomeTask2.SmokeAndRegressionTest"/>-->
+            <class name="HomeTask3.DragAndDropTest"/>
             <class name="HomeTask3.CheckingExistenceOfElements"/>
         </classes>
     </test>

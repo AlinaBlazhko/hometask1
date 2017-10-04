@@ -23,6 +23,7 @@ import static enums.TestNames.*;
  * Created by X240 on 9/19/2017.
  */
 @Listeners(AllureTestListener.class)
+
 public class CheckingExistenceOfElements extends SelenideExtension{
 
     private LoginPage log = page(LoginPage.class);

@@ -2,10 +2,12 @@ package HomeTask3;
 
 import init_classes.SelenideExtension;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import page_object.DataPage;
 import page_object.section.LeftSection;
 import page_object.LoginPage;
+import ru.yandex.qatools.allure.testng.AllureTestListener;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
@@ -16,20 +18,15 @@ import static enums.TestNames.*;
 /**
  * Created by X240 on 9/23/2017.
  */
+@Listeners(AllureTestListener.class)
 public class DragAndDropTest extends SelenideExtension{
 
-    private LoginPage login;
-    private DataPage slider;
-    private LeftSection leftSection;
+    private LoginPage login = page(LoginPage.class);
+    private DataPage slider = page(DataPage.class);
+    private LeftSection leftSection = page(LeftSection.class);
 
-    @BeforeClass
-    public void beforeClass(){
-        login = page(LoginPage.class);
-        leftSection = page(LeftSection.class);
-        slider = page(DataPage.class);
-    }
 
-    @Test
+    @Test(groups = "Smoke")
     public void dragAndDropTest(){
 
         //Open test site
