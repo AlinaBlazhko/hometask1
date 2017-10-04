@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
  * Created by X240 on 9/12/2017.
  */
 public class LoginAndContactForm {
-    @Test
+    @Test(groups = "Smoke")
     public void test1(){
 
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
