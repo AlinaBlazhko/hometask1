@@ -3,6 +3,7 @@ package page_object;
 import enums.TestNames;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static enums.TestNames.*;
 import static org.testng.Assert.assertEquals;
@@ -26,6 +27,7 @@ public class LoginPage {
 
     @FindBy(css = ".profile-photo")
     private WebElement userName;
+
 
     public void login(String user, String pass){
         loginForm.click();
