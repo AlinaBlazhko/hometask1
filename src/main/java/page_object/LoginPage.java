@@ -28,7 +28,7 @@ public class LoginPage {
     @FindBy(css = ".profile-photo")
     private WebElement userName;
 
-
+    @Step("Perform login")
     public void login(String user, String pass){
         loginForm.click();
         login.sendKeys(user);
@@ -36,6 +36,7 @@ public class LoginPage {
         submit.click();
     }
 
+    @Step("Assert user name")
     public void assertUserName(){
         assertEquals(userName.getText(), PITER_CHAILOVSKII.name);
     }

@@ -25,6 +25,8 @@ public class LoginForm extends SelenideExtension {
     public void loginTest() {
 
         open(TEST_URL.name);
+        log.login("epam", "1234");
+        log.assertUserName();
 
     }
 
