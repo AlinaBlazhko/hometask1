@@ -21,12 +21,18 @@ import static enums.TestNames.*;
 @Listeners(AllureTestListener.class)
 public class DragAndDropTest extends SelenideExtension{
 
-    private LoginPage login = page(LoginPage.class);
-    private DataPage slider = page(DataPage.class);
-    private LeftSection leftSection = page(LeftSection.class);
+    private LoginPage login;
+    private DataPage slider;
+    private LeftSection leftSection;
 
+    @BeforeClass
+    public void beforeClass(){
+        login = page(LoginPage.class);
+        leftSection = page(LeftSection.class);
+        slider = page(DataPage.class);
+    }
 
-    @Test(groups = "Smoke")
+    @Test
     public void dragAndDropTest(){
 
         //Open test site
