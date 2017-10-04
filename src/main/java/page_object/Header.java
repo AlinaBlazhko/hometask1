@@ -40,7 +40,6 @@ public class Header {
     @FindBy(xpath = "//ul[contains(@class, 'dropdown-menu')]/li[6]/a")
     private SelenideElement differentElements;
 
-    @Step
     public void checkElements(){
         support.should(visible);
         dates.should(visible);
